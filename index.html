@@ -7,13 +7,14 @@
     <title>Mosaic</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="shortcut icon" href="./assets/icon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
     <script async src="js/app.js"></script>
 </head>
 
 <body>
     <div class="wrapper">
         <div class="table" id="myTable">
-            <table class="table">
+            <table class="table" id="table_id">
                 <thead class="table__header">
                     <tr>
                         <th>Firstname</th>
@@ -21,7 +22,7 @@
                         <th>Email</th>
                         <th>Phonenumber</th>
                         <th>Date of Birth
-                            <select name="birth month" id="selectMonth">
+                            <select name="birth month" id="select--month">
                                 <option value="01">Январь</option>
                                 <option value="02">Февраль</option>
                                 <option selected value="03">Март</option>
@@ -35,10 +36,10 @@
                                 <option value="11">Ноябрь</option>
                                 <option value="12">Декабрь</option>
                             </select>
-                            <select name="birth day" id="selectDay">
+                            <select name="birth day" id="select--day">
                                 <option value="01">1</option>
                                 <option value="02">2</option>
-                                <option selected value="03">3</option>
+                                <option value="03">3</option>
                                 <option value="04">4</option>
                                 <option value="05">5</option>
                                 <option value="06">6</option>
@@ -74,21 +75,29 @@
                 </thead>
                 <tbody class="table__body"></tbody>
 
-                <tfoot>
-                    <script type="text/template" id="template">
-                        <tr data-contact-id="{{id}}" class="template-row">
-                            <td class="template__firstname">{{firstname}}</td>
-                            <td class="template__lastname">{{lastname}}</td>
-                            <td class="template__email">{{email}}</td>
-                            <td class="template__phonenumber">{{phonenumber}}</td>
-                            <td class="template__dob">{{dob}}</td>
-                            <td class="template__company">{{company}}</td>
-                        </tr>
-                    </script>
+                <tfoot class="table__footer hide">
+                    <tr>
+                        <td colspan="6">
+                            Извините.Человек с выбраной Вами датой рождения отсутствует. Проверьте правильность
+                            введенной даты или выберете другую.
+                        </td>
+                    </tr>
                 </tfoot>
             </table>
         </div>
     </div>
+
+    <script type="text/template" id="template">
+        <tr data-contact-id="{{id}}" class="template-row see">
+            <td class="template__firstname">{{firstname}}</td>
+            <td class="template__lastname">{{lastname}}</td>
+            <td class="template__email">{{email}}</td>
+            <td class="template__phonenumber">{{phonenumber}}</td>
+            <td class="template__dob">{{dob}}</td>
+            <td class="template__company">{{company}}</td>
+        </tr>
+    </script>
+
 </body>
 
 </html>
