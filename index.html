@@ -7,84 +7,85 @@
     <title>Mosaic</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="shortcut icon" href="./assets/icon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
     <script async src="js/app.js"></script>
 </head>
 
 <body>
     <div class="wrapper">
-        <div class="table" id="myTable">
-            <table class="table" id="table_id">
-                <thead class="table__header">
-                    <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Email</th>
-                        <th>Phonenumber</th>
-                        <th>Date of Birth
-                            <select name="birth month" id="select--month">
-                                <option value="01">Январь</option>
-                                <option value="02">Февраль</option>
-                                <option selected value="03">Март</option>
-                                <option value="04">Апрель</option>
-                                <option value="05">Май</option>
-                                <option value="06">Июнь</option>
-                                <option value="07">Июль</option>
-                                <option value="08">Август</option>
-                                <option value="09">Сентябрь</option>
-                                <option value="10">Октябрь</option>
-                                <option value="11">Ноябрь</option>
-                                <option value="12">Декабрь</option>
-                            </select>
-                            <select name="birth day" id="select--day">
-                                <option value="01">1</option>
-                                <option value="02">2</option>
-                                <option value="03">3</option>
-                                <option value="04">4</option>
-                                <option value="05">5</option>
-                                <option value="06">6</option>
-                                <option value="07">7</option>
-                                <option value="08">8</option>
-                                <option value="09">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                                <option value="20">20</option>
-                                <option value="21">21</option>
-                                <option value="22">22</option>
-                                <option value="23">23</option>
-                                <option value="24">24</option>
-                                <option value="25">25</option>
-                                <option value="26">26</option>
-                                <option value="27">27</option>
-                                <option value="28">28</option>
-                                <option value="29">29</option>
-                                <option value="30">30</option>
-                                <option value="31">31</option>
-                            </select>
-                        </th>
-                        <th>Company</th>
-                    </tr>
-                </thead>
-                <tbody class="table__body"></tbody>
+        <table class="table">
+            <thead class="table__header">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Phonenumber</th>
+                    <th>
+                        <select name="birth month" id="select--month" class="table__select--month" autofocus>
+                            <option value="">месяц</option>
+                            <option value="01">Январь</option>
+                            <option value="02">Февраль</option>
+                            <option value="03">Март</option>
+                            <option value="04">Апрель</option>
+                            <option value="05">Май</option>
+                            <option value="06">Июнь</option>
+                            <option value="07">Июль</option>
+                            <option value="08">Август</option>
+                            <option value="09">Сентябрь</option>
+                            <option value="10">Октябрь</option>
+                            <option value="11">Ноябрь</option>
+                            <option value="12">Декабрь</option>
+                        </select>
+                        <select name="birth day" id="select--day" class="table__select--day">
+                            <option value="">день</option>
+                            <option value="01">1</option>
+                            <option value="02">2</option>
+                            <option value="03">3</option>
+                            <option value="04">4</option>
+                            <option value="05">5</option>
+                            <option value="06">6</option>
+                            <option value="07">7</option>
+                            <option value="08">8</option>
+                            <option value="09">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                        Date of Birth
+                    </th>
+                    <th>Company</th>
+                </tr>
+            </thead>
 
-                <tfoot class="table__footer hide">
-                    <tr>
-                        <td colspan="6">
-                            Извините.Человек с выбраной Вами датой рождения отсутствует. Проверьте правильность
-                            введенной даты или выберете другую.
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
+            <tbody class="table__body"></tbody>
+
+            <tfoot class="table__footer hidden">
+                <tr>
+                    <td colspan="6">
+                        Человек с выбраной Вами датой рождения отсутствует. Проверьте правильность
+                        введенной даты или выберете иную.
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
     </div>
 
     <script type="text/template" id="template">

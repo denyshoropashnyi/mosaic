@@ -1,1 +1,6 @@
-// $headings-color: #20387d;
+$table-header-color: lightsteelblue;
+$table-border-color: #f1f1f1;
+$table-body-hover-color: darken(#f1f1f1, 1%);
+$select-bg-color: lighten($table-header-color, 5%);
+$border-shadow-color: rgba(124, 124, 124, 0.9);
+$table-footer-warning-color: rgba(255, 0, 0, 0.39);

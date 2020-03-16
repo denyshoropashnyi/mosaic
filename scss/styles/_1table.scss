@@ -1,0 +1,62 @@
+.table {
+  width: 98%;
+  font-size: 18px;
+  border-collapse: collapse;
+  border: 2px solid $table-border-color;
+  @include border-shadow($border-shadow-color);
+  margin: 0 auto;
+
+  &__header {
+    background-color: $table-header-color;
+  }
+
+  &__footer {
+    background-color: $table-footer-warning-color;
+  }
+
+  th,
+  td {
+    font-size: 20px;
+    text-align: center;
+    padding: 12.5px;
+  }
+
+  th {
+    font-size: 26px;
+    vertical-align: bottom;
+  }
+
+  .table__body tr {
+    border-bottom: 2px solid $table-border-color;
+
+    &:hover {
+      background-color: $table-body-hover-color;
+    }
+  }
+}
+
+select {
+  width: 50%;
+  height: 36px;
+  display: block;
+  font-family: "Comic Sans MS";
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 10%;
+  margin: 4px auto;
+  background: $select-bg-color;
+  opacity: 0.6;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:focus {
+    box-shadow: 0 0 9px 6px $table-footer-warning-color;
+    border: 1px solid $table-footer-warning-color;
+  }
+
+  option:first-child {
+    display: none;
+  }
+}

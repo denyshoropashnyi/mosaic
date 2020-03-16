@@ -2,12 +2,9 @@
 
 const USER_ROW_TEMPLATE = document.getElementById('template').innerHTML;
 const URL = 'json/json.txt';
-
 const userTableBody = document.getElementsByClassName('table__body')[0];
 const userTableRow = userTableBody.getElementsByTagName('tr');
 const userTableFooter = document.getElementsByClassName('table__footer')[0];
-const userTemplateRow = document.getElementsByClassName('template-row');
-
 const selectDay = document.getElementById('select--day');
 const selectMonth = document.getElementById('select--month');
 const dateOfBirth = document.getElementsByClassName('template__dob');
@@ -51,10 +48,10 @@ function filterData() {
             dateOfBirth[i].innerText.split('-')[1] == selectMonth.value
         ) {
             userTableRow[i].style.display = '';
-            userTableRow[i].classList.add('see');
+            userTableRow[i].classList.add('shown');
         } else {
-            userTableRow[i].classList.remove('see');
             userTableRow[i].style.display = 'none';
+            userTableRow[i].classList.remove('shown');
         }
     }
     toggleWarningState();
@@ -62,6 +59,6 @@ function filterData() {
 
 function toggleWarningState() {
     let userArr = Array.from(userTableRow);
-    const elemFound = userArr.find(e => e.classList.contains('see'));
-    elemFound ? userTableFooter.classList.add('hide') : userTableFooter.classList.remove('hide');
+    const elemFound = userArr.find(e => e.classList.contains('shown'));
+    elemFound ? userTableFooter.classList.add('hidden') : userTableFooter.classList.remove('hidden'), selectDay.focus();
 }
