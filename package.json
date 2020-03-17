@@ -1,0 +1,15 @@
+{
+  "name": "mosaic",
+  "version": "1.0.0",
+  "description": "test work for Mosaic",
+  "main": "js/app.js",
+  "scripts": {
+    "start": "node ./",
+    "run": "static-server"
+  },
+  "author": "horopashnyi",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}
