@@ -4,7 +4,6 @@
   "description": "test work for Mosaic",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "run": "static-server"
   },
   "repository": {
