@@ -4,8 +4,6 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transition: all 0.88s ease-in-out;
-  transition: all 0.88s ease-in-out;
 }
 
 body {
@@ -54,6 +52,8 @@ body {
 
 .table .table__body tr:hover {
   background-color: #eeeeee;
+  -webkit-transition: all 0.88s ease-in-out;
+  transition: all 0.88s ease-in-out;
 }
 
 select {
@@ -71,12 +71,16 @@ select {
 
 select:hover {
   opacity: 0.9;
+  -webkit-transition: all 0.88s ease-in-out;
+  transition: all 0.88s ease-in-out;
 }
 
 select:focus {
   -webkit-box-shadow: 0 0 9px 6px rgba(255, 0, 0, 0.39);
           box-shadow: 0 0 9px 6px rgba(255, 0, 0, 0.39);
   border: 1px solid rgba(255, 0, 0, 0.39);
+  -webkit-transition: all 0.88s ease-in-out;
+  transition: all 0.88s ease-in-out;
 }
 
 select option:first-child {
