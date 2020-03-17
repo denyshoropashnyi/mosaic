@@ -31,8 +31,7 @@
 
     &:hover {
       background-color: $table-body-hover-color;
-      -webkit-transition: all 0.88s ease-in-out;
-      transition: all 0.88s ease-in-out;
+      @include transition-element(0.88s);
     }
   }
 }
@@ -51,15 +50,13 @@ select {
 
   &:hover {
     opacity: 0.9;
-    -webkit-transition: all 0.88s ease-in-out;
-    transition: all 0.88s ease-in-out;
+    @include transition-element(0.88s);
   }
 
   &:focus {
     box-shadow: 0 0 9px 6px $table-footer-warning-color;
     border: 1px solid $table-footer-warning-color;
-    -webkit-transition: all 0.88s ease-in-out;
-    transition: all 0.88s ease-in-out;
+    @include transition-element(0.88s);
   }
 
   option:first-child {
