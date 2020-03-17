@@ -2,14 +2,22 @@
   "name": "mosaic",
   "version": "1.0.0",
   "description": "test work for Mosaic",
-  "main": "js/app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node ./",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "run": "static-server"
   },
-  "author": "horopashnyi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denyshoropashnyi/mosaic.git"
+  },
+  "author": "Denys Horopashnyi",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denyshoropashnyi/mosaic/issues"
+  },
+  "homepage": "https://github.com/denyshoropashnyi/mosaic#readme",
   "dependencies": {
-    "lodash": "^4.17.11"
+    "static-server": "^2.2.1"
   }
 }
