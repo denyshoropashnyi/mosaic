@@ -4,7 +4,7 @@
   "description": "test work for Mosaic",
   "main": "index.js",
   "scripts": {
-    "run": "static-server"
+    "start": "static-server"
   },
   "repository": {
     "type": "git",
