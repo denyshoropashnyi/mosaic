@@ -1,7 +1,7 @@
 'use strict';
 
 const USER_ROW_TEMPLATE = document.getElementById('template').innerHTML;
-const URL = 'json/json.txt';
+const USER_URL = 'json/json.txt';
 const userTableBody = document.getElementsByClassName('table__body')[0];
 const userTableRow = userTableBody.getElementsByTagName('tr');
 const userTableFooter = document.getElementsByClassName('table__footer')[0];
@@ -16,7 +16,7 @@ function init() {
 }
 
 function fetchUsers() {
-    return fetch(URL)
+    return fetch(USER_URL)
         .then(resp => resp.json())
         .then(renderUsers)
         .then(addEvents);
